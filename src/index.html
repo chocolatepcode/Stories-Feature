@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Feature</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Stories Bar -->
+        <div class="stories-bar">
+            <div class="stories-list" id="storiesList">
+                <!-- Add Story Button -->
+                <div class="story-item add-story" id="addStoryBtn">
+                    <div class="story-avatar">
+                        <span class="plus-icon">+</span>
+                    </div>
+                    <span class="story-name">Add Story</span>
+                </div>
+                <!-- Story items will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Story Viewer Overlay -->
+        <div class="story-viewer" id="storyViewer">
+            <div class="story-viewer-close" id="closeViewer">&times;</div>
+            <div class="story-viewer-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="story-viewer-content">
+                <button class="story-nav-btn prev" id="prevStory">&#10094;</button>
+                <img src="" alt="Story" id="storyImage">
+                <button class="story-nav-btn next" id="nextStory">&#10095;</button>
+            </div>
+            <div class="story-viewer-info">
+                <span class="story-viewer-name" id="storyViewerName"></span>
+                <span class="story-viewer-time" id="storyViewerTime"></span>
+            </div>
+        </div>
+
+        <!-- Upload Modal -->
+        <div class="modal" id="uploadModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add New Story</h2>
+                    <span class="modal-close" id="closeModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📷</div>
+                        <p>Click or drag to upload an image</p>
+                        <p class="upload-hint">Max dimensions: 1080px x 1920px</p>
+                    </div>
+                    <div class="preview-container" id="previewContainer" style="display: none;">
+                        <img src="" alt="Preview" id="imagePreview">
+                        <button class="btn-upload" id="confirmUpload">Post Story</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
